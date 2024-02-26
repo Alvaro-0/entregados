@@ -1,0 +1,98 @@
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 20px;
+  
+    justify-content: space-between;
+  
+  }
+  
+  
+.flex-item  {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: red;
+
+  
+    img {
+        border-radius: 100%;
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        
+      }
+
+  }
+  
+
+   #section_pollo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  
+    .productos_pollo {
+      @include dsfl(column,center,center); 
+      margin: 20px;
+      padding: 22px;
+      border: 3px solid black;
+      width: 200px;
+      position: relative;
+      display: flex;
+     
+     /* flex-direction: column;
+      align-items: center;
+      text-align: center;
+      */
+    }
+    .productos_pollo div img   {
+      width: 80px;
+      height: 80px;
+      
+    }
+    .productos_pollo:hover img{
+      transition: transform 0.3s;
+      transform: skew(10deg,20deg);
+    }
+  
+    }
+
+  
+  #section_pastas {
+ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box; 
+
+    
+   
+.productos_pastas {
+      border: 2px solid $cl-black;
+    
+      margin: 10px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;     
+
+}
+
+.productos_pastas img  {
+  width: 100px;
+  height: 100px;
+}
+.productos_pastas:hover img{
+  transition: transform 0.3s;
+  transform: rotate(90deg);
+}
+}

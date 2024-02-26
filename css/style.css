@@ -1,0 +1,184 @@
+@charset "UTF-8";
+html {
+  background-color: rgb(248, 248, 244);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+}
+header nav {
+  display: flex;
+}
+header nav .logo {
+  width: 40px;
+  height: auto;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  margin-right: 15px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(12, 1, 1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #063674;
+}
+
+.carousel-item img {
+  width: 400px;
+  height: 400px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.flex-item {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: red;
+}
+.flex-item img {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+
+#section_pollo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#section_pollo .productos_pollo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  padding: 22px;
+  border: 3px solid black;
+  width: 200px;
+  position: relative;
+  display: flex;
+  /* flex-direction: column;
+   align-items: center;
+   text-align: center;
+   */
+}
+#section_pollo .productos_pollo div img {
+  width: 80px;
+  height: 80px;
+}
+#section_pollo .productos_pollo:hover img {
+  transition: transform 0.3s;
+  transform: skew(10deg, 20deg);
+}
+
+#section_pastas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#section_pastas .productos_pastas {
+  border: 2px solid rgb(12, 1, 1);
+  margin: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#section_pastas .productos_pastas img {
+  width: 100px;
+  height: 100px;
+}
+#section_pastas .productos_pastas:hover img {
+  transition: transform 0.3s;
+  transform: rotate(90deg);
+}
+
+footer {
+  background-color: rgb(230, 230, 225);
+  text-align: right;
+}
+footer img {
+  width: 100px;
+  height: auto;
+}
+
+iframe {
+  max-width: 75%;
+  max-height: 75%;
+  height: auto;
+}
+
+.ifrcont {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.ifrcont iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* (teléfonos móviles) 767   */
+@media (max-width: 767px) {
+  body {
+    background-color: rgb(20, 133, 170);
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  #section_pastas {
+    grid-template-columns: 1fr;
+  }
+  #section_pollo {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 991px) {
+  body {
+    background-color: rgb(15, 224, 15);
+  }
+}
+@media only screen and (max-width: 1199px) {
+  body {
+    background-color: rgb(245, 245, 201);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
